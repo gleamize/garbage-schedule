@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>ゴミ回収ペア表</title>
     <style>
@@ -15,7 +14,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             border-radius: 12px;
@@ -79,7 +78,6 @@
             text-align: center;
             border-bottom: 1px solid #f1f5f9;
             transition: all 0.2s ease;
-            white-space: nowrap; /* Prevent line breaks inside cells */
         }
 
         tr:hover td {
@@ -91,7 +89,6 @@
             font-weight: 600;
             color: white;
             width: 70px;
-            min-width: 60px; /* Ensure minimum width for day cells */
         }
 
         .upper-floor {
@@ -122,106 +119,6 @@
             border: 1px solid #e2e8f0;
             font-weight: 500;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 576px) {
-            .container {
-                padding: 15px;
-                margin: 10px;
-            }
-
-            table {
-                font-size: 0.8em;
-                display: block;
-                width: 100%;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                white-space: nowrap;
-            }
-
-            table thead {
-                display: none;
-            }
-
-            table tr {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 15px;
-                border: 1px solid #e2e8f0;
-                border-radius: 8px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            }
-
-            table td {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 12px;
-                border: none;
-                border-bottom: 1px solid #f1f5f9;
-                white-space: normal;
-                text-align: left;
-            }
-
-            table td:last-child {
-                border-bottom: none;
-            }
-
-            table td::before {
-                content: attr(data-label);
-                font-weight: 600;
-                color: #475569;
-                text-transform: uppercase;
-                margin-right: 15px;
-                font-size: 0.9em;
-                width: 80px;
-                flex-shrink: 0;
-            }
-
-            .day-cell {
-                background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-                color: white;
-                font-size: 1em;
-                padding: 12px;
-                border-bottom: 1px solid #f1f5f9;
-                text-align: center;
-                border-radius: 8px 8px 0 0;
-                width: auto;
-                justify-content: center;
-            }
-
-            .upper-floor, .lower-floor, .vacuum {
-                border-left: none;
-            }
-
-            .person-name {
-                font-size: 0.85em;
-                padding: 4px 8px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .info-section, .stats-section {
-                padding: 15px;
-            }
-
-            .info-header, .stats-header {
-                font-size: 1.1em;
-            }
-
-            .info-item, .notice-box, .balance-note {
-                padding: 12px;
-            }
-
-            .info-title {
-                font-size: 1em;
-            }
-
-            .info-desc, .notice-text, .balance-text, .schedule-text, .stats-table td {
-                font-size: 0.9em;
-            }
         }
 
         /* 詳細説明セクション */
@@ -504,33 +401,33 @@
                 <tbody>
                     <tr>
                         <td class="day-cell">月</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山城</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
+                        <td class="lower-floor"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">山城</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">火</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山本</span></td>
+                        <td class="upper-floor"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
+                        <td class="vacuum"><span class="person-name">山本</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">水</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">金丸</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">金丸</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">木</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">佐武</span></td>
+                        <td class="upper-floor"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">佐武</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">金</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">逢坂</span></td>
+                        <td class="upper-floor"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">逢坂</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -550,33 +447,33 @@
                 <tbody>
                     <tr>
                         <td class="day-cell">月</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山本</span></td>
+                        <td class="upper-floor"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
+                        <td class="vacuum"><span class="person-name">山本</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">火</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">金丸</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">金丸</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">水</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">佐武</span></td>
+                        <td class="upper-floor"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">佐武</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">木</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">逢坂</span></td>
+                        <td class="upper-floor"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">逢坂</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">金</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山城</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
+                        <td class="lower-floor"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">山城</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -596,33 +493,33 @@
                 <tbody>
                     <tr>
                         <td class="day-cell">月</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">金丸</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">金丸</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">火</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">佐武</span></td>
+                        <td class="upper-floor"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">佐武</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">水</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">逢坂</span></td>
+                        <td class="upper-floor"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">逢坂</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">木</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山城</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
+                        <td class="lower-floor"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">山城</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">金</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山本</span></td>
+                        <td class="upper-floor"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
+                        <td class="vacuum"><span class="person-name">山本</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -642,33 +539,33 @@
                 <tbody>
                     <tr>
                         <td class="day-cell">月</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">佐武</span></td>
+                        <td class="upper-floor"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">佐武</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">火</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">逢坂</span></td>
+                        <td class="upper-floor"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">逢坂</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">水</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山城</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
+                        <td class="lower-floor"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">山城</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">木</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山本</span></td>
+                        <td class="upper-floor"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
+                        <td class="vacuum"><span class="person-name">山本</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">金</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">金丸</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">金丸</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -688,33 +585,33 @@
                 <tbody>
                     <tr>
                         <td class="day-cell">月</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山城</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">山本</span></td>
+                        <td class="lower-floor"><span class="person-name">金丸</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">山城</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">火</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">山本</span></td>
+                        <td class="upper-floor"><span class="person-name">佐武</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">金丸</span></td>
+                        <td class="vacuum"><span class="person-name">山本</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">水</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">佐武</span></td>
+                        <td class="upper-floor"><span class="person-name">山本</span><span class="person-name">金丸</span></td>
+                        <td class="lower-floor"><span class="person-name">逢坂</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">佐武</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">木</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">山城</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">金丸</span></td>
+                        <td class="upper-floor"><span class="person-name">逢坂</span><span class="person-name">佐武</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">山城</span></td>
+                        <td class="vacuum"><span class="person-name">金丸</span></td>
                     </tr>
                     <tr>
                         <td class="day-cell">金</td>
-                        <td class="upper-floor" data-label="上階"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
-                        <td class="lower-floor" data-label="下階"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
-                        <td class="vacuum" data-label="バキューム"><span class="person-name">逢坂</span></td>
+                        <td class="upper-floor"><span class="person-name">金丸</span><span class="person-name">山城</span></td>
+                        <td class="lower-floor"><span class="person-name">山本</span><span class="person-name">佐武</span></td>
+                        <td class="vacuum"><span class="person-name">逢坂</span></td>
                     </tr>
                 </tbody>
             </table>
